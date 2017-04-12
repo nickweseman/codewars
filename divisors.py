@@ -1,9 +1,5 @@
 def divisors(integer):
-    list_ = list()
-
-    for i in range(2, integer):
-        if integer % i == 0:
-            list_.append(i)
+    list_ = [i for i in range(2, integer) if integer % i == 0]
 
     if list_:
         return list_
