@@ -1,8 +1,10 @@
-fib_dict = {0: 0,
+from __future__ import print_function
+
+FIB_DICT = {0: 0,
             1: 1}
 
 
-def productFib(prod):
+def product_fib(prod):
     for i in range(prod):
         total = fib(i) * fib(i + 1)
 
@@ -13,11 +15,11 @@ def productFib(prod):
 
 
 def fib(n):
-    if fib_dict.get(n) is not None:
-        return fib_dict.get(n)
-    else:
-        fib_dict[n] = fib_dict.get(n-1) + fib_dict.get(n-2)
-        return fib_dict[n]
+    if FIB_DICT.get(n) is not None:
+        return FIB_DICT.get(n)
 
-print(productFib(4895))
-print(productFib(5895))
+    FIB_DICT[n] = FIB_DICT.get(n - 1) + FIB_DICT.get(n - 2)
+    return FIB_DICT[n]
+
+print(product_fib(4895))
+print(product_fib(5895))

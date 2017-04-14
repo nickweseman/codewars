@@ -1,10 +1,12 @@
-def dig_pow(n, p):
+from __future__ import print_function
+
+def dig_pow(num, pow_):
     total = 0
 
-    for index, i in enumerate(str(n)):
-        total += int(i) ** (p + index)
+    for index, i in enumerate(str(num)):
+        total += int(i) ** (pow_ + index)
 
-    return total / n if total % n == 0 else -1
+    return total / num if total % num == 0 else -1
 
 print(dig_pow(89, 1))
 print(dig_pow(92, 1))

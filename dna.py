@@ -1,10 +1,12 @@
+from __future__ import print_function
+
 import string
 
-def DNA_strand(dna):
-    map = string.maketrans("ATCG", "TAGC")
+def dna_strand(dna):
+    map_ = string.maketrans("ATCG", "TAGC")
 
-    return dna.translate(map)
+    return dna.translate(map_)
 
-print(DNA_strand("AAAA"))
-print(DNA_strand("ATTGC"))
-print(DNA_strand("GTAT"))
+print(dna_strand("AAAA"))
+print(dna_strand("ATTGC"))
+print(dna_strand("GTAT"))

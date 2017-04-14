@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 def likes(strs):
     formats = {
         0: "no one likes this",
